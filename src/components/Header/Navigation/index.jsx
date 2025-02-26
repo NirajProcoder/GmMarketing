@@ -18,7 +18,7 @@ const Navigation = () => {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="py-2">
+      <nav>
         <div className="container flex items-center justify-end gap-8">
           <div className="col_1 w-[20%]">
             <Button
@@ -36,7 +36,7 @@ const Navigation = () => {
                   to="/"
                   className="link transition text-[14px] font-[500] "
                 >
-                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4">
                     Home
                   </Button>
                 </Link>
@@ -67,7 +67,7 @@ const Navigation = () => {
                   to="/"
                   className="link transition text-[14px] font-[500] "
                 >
-                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4">
                     Crockery
                   </Button>
                 </Link>
@@ -181,7 +181,7 @@ const Navigation = () => {
                   to="/"
                   className="link transition text-[14px] font-[500] "
                 >
-                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4">
                     Banquet Ware
                   </Button>
                 </Link>
@@ -191,7 +191,7 @@ const Navigation = () => {
                   to="/"
                   className="link transition text-[14px] font-[500] "
                 >
-                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4">
                     Kitchen
                   </Button>
                 </Link>
@@ -201,7 +201,7 @@ const Navigation = () => {
                   to="/"
                   className="link transition text-[14px] font-[500] "
                 >
-                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]">
+                  <Button className="link transition !font-[500] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4">
                     Bar Accessories
                   </Button>
                 </Link>
