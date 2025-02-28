@@ -25,8 +25,8 @@ const Navigation = () => {
               className="!text-black gap-2 w-full"
               onClick={openCategoryPanel}
             >
-              <RiMenu2Fill className="text-[18px]" /> Shop By Categories
-              <LiaAngleDownSolid className="text-[13px] ml-auto font-bold" />
+              <RiMenu2Fill className="text-[18px] " /> Shop By Categories
+              <LiaAngleDownSolid className="text-[13px] ml-auto !font-bold" />
             </Button>
           </div>
           <div className="col_2 w-[60%]">

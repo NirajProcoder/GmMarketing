@@ -1,5 +1,6 @@
 import React from "react";
 import AdsBannerSlider from "../../components/AdsBannerSlider";
+import AdsBannerSliderV2 from "../../components/AdsBannerSliderV2";
 import HomeCatSlider from "../../components/HomeCartSlider";
 import HomeSlider from "../../components/HomeSlider";
 import { LiaShippingFastSolid } from "react-icons/lia";
@@ -14,7 +15,6 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
 import BlogItem from "../../components/BlogItem";
-import Footer from "../../components/Footer";
 import HomeBannerV2 from "../../components/HomeSliderV2";
 import BannerBoxV2 from "../../components/BannerBoxV2";
 
@@ -107,7 +107,7 @@ const Home = () => {
           </div>
 
           {/* Ads Banner Slider */}
-          <AdsBannerSlider items={4} />
+          <AdsBannerSliderV2 items={4} />
         </div>
       </section>
 
@@ -164,8 +164,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <Footer />
     </>
   );
 };
