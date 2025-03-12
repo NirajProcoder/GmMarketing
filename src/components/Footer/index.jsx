@@ -6,14 +6,21 @@ import { LiaGiftSolid } from "react-icons/lia";
 // import { BiSupport } from "react-icons/bi";
 import { MdSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { IoChatboxOutline } from "react-icons/io5";
+import { IoChatboxOutline, IoCloseSharp } from "react-icons/io5";
 import Button from "@mui/material/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { FaFacebookF, FaInstagram, FaPinterestP } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
 
+import Drawer from "@mui/material/Drawer";
+import CartPanel from "../CartPanel/CartPanel";
+import { useContext } from "react";
+import { MyContext } from "../../App";
+
 const Footer = () => {
+  const context = useContext(MyContext);
+
   return (
     <>
       <footer className="py-6 bg-[#fafafa]">
@@ -239,6 +246,24 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Cart Panel */}
+      <Drawer
+        open={context.openCartPanel}
+        onClose={context.toggleCartPanel(false)}
+        anchor={"right"}
+        className=" cartPanel"
+      >
+        <div className="flex items-center justify-between p-3 px-4 gap-3 border-b border-rgba(0,0,0,0.1) overflow-hidden">
+          <h4>Shopping Cart (1)</h4>
+          <IoCloseSharp
+            className="text-[20px] cursor-pointer"
+            onClick={context.toggleCartPanel(false)}
+          />
+        </div>
+
+        <CartPanel />
+      </Drawer>
     </>
   );
 };

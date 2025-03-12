@@ -19,23 +19,33 @@ import Register from "./Pages/Register/Register";
 const MyContext = createContext();
 
 function App() {
+  // Product Details Modal
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
   const [maxWidth] = React.useState("lg");
   const [fullWidth] = React.useState(true);
+
+  // Cart Drawer Function
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
   const handleCloseProductDetailsModal = () => {
     setOpenProductDetailsModal(false);
   };
 
+  const toggleCartPanel = (newOpen) => () => {
+    setOpenCartPanel(newOpen);
+  };
+
   const values = {
-    setOpenProductDetailsModal, // This is correctly set
+    setOpenProductDetailsModal,
+    setOpenCartPanel,
+    toggleCartPanel,
+    openCartPanel,
   };
 
   return (
     <>
       <BrowserRouter>
         <MyContext.Provider value={values}>
-          {" "}
           {/* Changed to directly provide values */}
           <Header />
           <Routes>
