@@ -15,6 +15,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import ProductDetailsComponent from "./components/ProductDetailsComponent/ProductDetailsComponent";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import CartPage from "./Pages/Cart/CartPage";
 
 const MyContext = createContext();
 
@@ -66,6 +67,8 @@ function App() {
             <Route path={"/login"} exact={true} element={<Login />} />
             {/* Register Page */}
             <Route path={"/register"} exact={true} element={<Register />} />
+            {/* Cart Page */}
+            <Route path={"/cart"} exact={true} element={<CartPage />} />
           </Routes>
           <Footer />
         </MyContext.Provider>

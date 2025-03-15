@@ -38,7 +38,10 @@ const ProductItem = () => {
         {/* Product Actions Icons */}
         <div className="actions absolute top-[-200px] right-[5px] z-50 flex items-center gap-2 flex-col w-[40px] transition-all duration-300 group-hover:top-[15px] opacity-0 group-hover:opacity-100">
           {/* Quick View */}
-          <Button className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full !bg-white !text-black hover:!bg-primary hover:text-white group" onClick={() => context.setOpenProductDetailsModal(true)}>
+          <Button
+            className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full !bg-white !text-black hover:!bg-primary hover:text-white group"
+            onClick={() => context.setOpenProductDetailsModal(true)}
+          >
             <MdZoomOutMap className="text-[18px] !text-black group-hover:text-white  hover:!text-white" />
           </Button>
 
