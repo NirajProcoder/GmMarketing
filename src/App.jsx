@@ -6,7 +6,6 @@ import Home from "./Pages/Home";
 import ProductListing from "./Pages/ProductListing/ProductListing";
 import Footer from "./components/Footer";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
@@ -18,8 +17,8 @@ import Register from "./Pages/Register/Register";
 import CartPage from "./Pages/Cart/CartPage";
 import Verify from "./Pages/Verify/Verify";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
-
 import toast, { Toaster } from "react-hot-toast";
+import Checkout from "./Pages/Checkout/Checkout";
 
 const MyContext = createContext();
 
@@ -86,11 +85,9 @@ function App() {
             {/* Verify Page */}
             <Route path={"/verify"} exact={true} element={<Verify />} />
             {/* Forgot Password */}
-            <Route
-              path={"/forgot-password"}
-              exact={true}
-              element={<ForgotPassword />}
-            />
+            <Route path={"/forgot-password"} exact={true} element={<ForgotPassword />}/>
+            {/* Checkout */}
+            <Route path={"/checkout"} exact={true} element={<Checkout />}/>
           </Routes>
           <Footer />
         </MyContext.Provider>

@@ -27,7 +27,7 @@ const Verify = () => {
 
           <p className="text-center mt-0 mb-4">
             OTP send to
-            <span className="text-primary font-bold">nirajadmin@gmail.com</span>
+            <span className="text-primary font-bold"> nirajadmin@gmail.com</span>
           </p>
 
           <form action="" onSubmit={verifyOTP}>
