@@ -20,6 +20,7 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import toast, { Toaster } from "react-hot-toast";
 import Checkout from "./Pages/Checkout/Checkout";
 import MyAccount from "./Pages/MyAccount/MyAccount";
+import MyList from "./Pages/MyList/MyList";
 
 const MyContext = createContext();
 
@@ -28,7 +29,7 @@ function App() {
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
   const [maxWidth] = React.useState("lg");
   const [fullWidth] = React.useState(true);
-  const [ isLogin, setIsLogin ] = useState(true);
+  const [isLogin, setIsLogin] = useState(true);
 
   // Cart Drawer Function
   const [openCartPanel, setOpenCartPanel] = useState(false);
@@ -57,7 +58,7 @@ function App() {
     openCartPanel,
     openAlertBox,
     isLogin,
-    setIsLogin
+    setIsLogin,
   };
 
   return (
@@ -89,11 +90,17 @@ function App() {
             {/* Verify Page */}
             <Route path={"/verify"} exact={true} element={<Verify />} />
             {/* Forgot Password */}
-            <Route path={"/forgot-password"} exact={true} element={<ForgotPassword />}/>
+            <Route
+              path={"/forgot-password"}
+              exact={true}
+              element={<ForgotPassword />}
+            />
             {/* Checkout */}
-            <Route path={"/checkout"} exact={true} element={<Checkout />}/>
+            <Route path={"/checkout"} exact={true} element={<Checkout />} />
             {/* My Account */}
-            <Route path={"/my-account"} exact={true} element={<MyAccount />}/>
+            <Route path={"/my-account"} exact={true} element={<MyAccount />} />
+            {/* My List */}
+            <Route path={"/my-list"} exact={true} element={<MyList />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
