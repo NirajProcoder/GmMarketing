@@ -34,13 +34,15 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        {/* Dashboard Section  */}
+        {/* Menu Section */}
         <ul className="mt-4">
           {/* Dashboard */}
           <li>
-            <Button className="w-full !capitalize !justify-start flex gap-3 text-[14px] !text-[rgba(0,0,0,0.8)] !font-[500] items-center !py-2 hover:!bg-[#f1f1f1]">
-              <RxDashboard className="text-[18px]" /> <span>Dashboard</span>
-            </Button>
+            <Link to={"/"}>
+              <Button className="w-full !capitalize !justify-start flex gap-3 text-[14px] !text-[rgba(0,0,0,0.8)] !font-[500] items-center !py-2 hover:!bg-[#f1f1f1]">
+                <RxDashboard className="text-[18px]" /> <span>Dashboard</span>
+              </Button>
+            </Link>
           </li>
           {/* Home Slides */}
           <li>
