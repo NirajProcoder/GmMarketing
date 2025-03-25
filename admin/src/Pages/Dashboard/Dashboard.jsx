@@ -20,6 +20,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 const columns = [
   { id: "product", label: "PRODUCT", minWidth: 150 },
@@ -35,24 +37,6 @@ function createData(name, code, population, size) {
   return { name, code, population, size, density };
 }
 
-const rows = [
-  createData("India", "IN", 1324171354, 3287263),
-  createData("China", "CN", 1403500365, 9596961),
-  createData("Italy", "IT", 60483973, 301340),
-  createData("United States", "US", 327167434, 9833520),
-  createData("Canada", "CA", 37602103, 9984670),
-  createData("Australia", "AU", 25475400, 7692024),
-  createData("Germany", "DE", 83019200, 357578),
-  createData("Ireland", "IE", 4857000, 70273),
-  createData("Mexico", "MX", 126577691, 1972550),
-  createData("Japan", "JP", 126317000, 377973),
-  createData("France", "FR", 67022000, 640679),
-  createData("United Kingdom", "GB", 67545757, 242495),
-  createData("Russia", "RU", 146793744, 17098246),
-  createData("Nigeria", "NG", 200962417, 923768),
-  createData("Brazil", "BR", 210147125, 8515767),
-];
-
 const Dashboard = () => {
   const [isOpenOrderdProduct, setIsOpenOrderdProduct] = useState(null);
 
@@ -64,6 +48,12 @@ const Dashboard = () => {
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
+  const [categoryFilterVal, setcategoryFilterVal] = React.useState("");
+
+  const handleChangeCatFilter = (event) => {
+    setcategoryFilterVal(event.target.value);
+  };
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -105,6 +95,32 @@ const Dashboard = () => {
             Products
             <span className="font-[400] text-[14px]">(Tailwind Css Table)</span>
           </h2>
+        </div>
+        {/* Category Filter */}
+        <div className="flex items-center w-full pl-5 justify-between pr-5">
+          <div className="col w-[20%]">
+            <h4 className="font-[600] text-[13px] mb-2">Category By</h4>
+            <Select
+              className="w-full"
+              size="small"
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={categoryFilterVal}
+              onChange={handleChangeCatFilter}
+              label="Category"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Crockery</MenuItem>
+              <MenuItem value={20}>Bakery</MenuItem>
+              <MenuItem value={30}>Kitchen</MenuItem>
+            </Select>
+          </div>
+          <div className="col w-[25%] ml-auto flex items-center gap-3">
+            <Button className="btn !bg-green-600 !text-white">Export</Button>
+            <Button className="btn-blue !text-white b">Add Product</Button>
+          </div>
         </div>
 
         <div className="relative overflow-x-auto mt-5 pb-5">
@@ -489,9 +505,38 @@ const Dashboard = () => {
           </h2>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex items-center w-full pl-5 justify-between pr-5">
+          <div className="col w-[20%]">
+            <h4 className="font-[600] text-[13px] mb-2">Category By</h4>
+            <Select
+              className="w-full"
+              size="small"
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={categoryFilterVal}
+              onChange={handleChangeCatFilter}
+              label="Category"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Crockery</MenuItem>
+              <MenuItem value={20}>Bakery</MenuItem>
+              <MenuItem value={30}>Kitchen</MenuItem>
+            </Select>
+          </div>
+          <div className="col w-[25%] ml-auto flex items-center gap-3">
+            <Button className="btn !bg-green-600 !text-white">Export</Button>
+            <Button className="btn-blue !text-white b">Add Product</Button>
+          </div>
+        </div>
+
+        <br />
+
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="sticky table">
-            <TableHead >
+            <TableHead>
               <TableRow>
                 <TableCell>
                   <Checkbox {...label} size="small" />
@@ -856,7 +901,7 @@ const Dashboard = () => {
                   </div>
                 </TableCell>
               </TableRow>
-              
+
               {/* Product Details 5 */}
               <TableRow>
                 {/* Checkbox */}
@@ -949,7 +994,7 @@ const Dashboard = () => {
         <TablePagination
           rowsPerPageOptions={[10, 25, 100]}
           component="div"
-          count={rows.length}
+          count={10}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}

@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { RxDashboard } from "react-icons/rx";
 import { FaRegImage } from "react-icons/fa";
@@ -10,6 +10,7 @@ import { IoBagCheckOutline } from "react-icons/io5";
 import { IoMdLogOut } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
 import { Collapse } from "react-collapse";
+import { MyContext } from "../../App";
 
 const Sidebar = () => {
   const [submenuIndex, setSubMenuIndex] = useState(null);
@@ -20,9 +21,17 @@ const Sidebar = () => {
       setSubMenuIndex(index);
     }
   };
+
+  const context = useContext(MyContext);
+  // sidebar fixed top-0 left-0 bg-[#fff] w-[18%] h-full border-r border-rgba(0,0,0,0.1) py-2 px-4
+
   return (
     <>
-      <div className="sidebar fixed top-0 left-0 bg-[#fff] w-[18%] h-full border-r border-rgba(0,0,0,0.1) py-2 px-4">
+      <div
+        className={`sidebar fixed top-0 left-0 bg-[#fff] h-full border-r border-[rgba(0,0,0,0.1)] py-2 px-4 w-[${
+          context.isSidebarOpen ? "18%" : "0px"
+        }]`}
+      >
         {/* Company Logo Section */}
         <div className="py-2 w-full">
           <Link to="/">
