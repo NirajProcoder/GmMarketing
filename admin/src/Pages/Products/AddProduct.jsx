@@ -394,6 +394,7 @@ const AddProduct = () => {
         </div>
         <hr />
         <br />
+        {/* Publish and View */}
         <Button type="button" className="btn-blue btn-lg w-full flex gap-2">
           <FaCloudUploadAlt className="text-[25px] text-white" />
           Publish and View
