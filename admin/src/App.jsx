@@ -25,6 +25,9 @@ import SubCategoryList from "./Pages/Category/SubCategoryList";
 import AddSubCategory from "./Pages/Category/AddSubCategory";
 import Users from "./Pages/Users/Users";
 import Orders from "./Pages/Orders/Orders";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import VerifyAccount from "./Pages/VerifyAccount/VerifyAccount";
+import ChangePassword from "./Pages/ChangePassword/ChangePassword";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -85,6 +88,36 @@ function App() {
       element: (
         <>
           <SignUP />
+        </>
+      ),
+    },
+    // Forgot Password
+    {
+      path: "/forgot-password",
+      exact: true,
+      element: (
+        <>
+          <ForgotPassword />
+        </>
+      ),
+    },
+    // Verify Account
+    {
+      path: "/verify-account",
+      exact: true,
+      element: (
+        <>
+          <VerifyAccount />
+        </>
+      ),
+    },
+    // Change-Password
+    {
+      path: "/change-password",
+      exact: true,
+      element: (
+        <>
+          <ChangePassword />
         </>
       ),
     },

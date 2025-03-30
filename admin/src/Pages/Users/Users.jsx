@@ -12,6 +12,7 @@ import SearchBox from "../../Components/SearchBox/SearchBox";
 import { MyContext } from "../../App";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
+import { SlCalender } from "react-icons/sl";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const columns = [
@@ -19,6 +20,7 @@ const columns = [
   { id: "userName", label: "USER NAME", minWidth: 100 },
   { id: "userEmail", label: "USER EMAIL", minWidth: 150 },
   { id: "userPhone", label: "USER PHONE NO", minWidth: 130 },
+  { id: "createdDate", label: "CREATED", minWidth: 130 },
 ];
 
 const Users = () => {
@@ -85,7 +87,7 @@ const Users = () => {
                 {/* User Image */}
                 <TableCell style={{ minWidth: columns.minWidth }}>
                   <div className="flex items-center gap-4 w-[70px]">
-                    <div className="img w-[65px] h-[65px] rounded-md overflow-hidden group">
+                    <div className="img w-[45px] h-[45px] rounded-md overflow-hidden group">
                       <Link to="/product/620645">
                         <img
                           src="https://mui.com/static/images/avatar/1.jpg"
@@ -113,6 +115,253 @@ const Users = () => {
                 <TableCell style={{ minWidth: columns.minWidth }}>
                   <span className="flex items-center gap-2">
                     <MdLocalPhone /> +91 9999999999
+                  </span>
+                </TableCell>
+
+                {/* Created Date */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender /> 01-01-2022
+                  </span>
+                </TableCell>
+              </TableRow>
+              {/* User Details 1 */}
+              <TableRow>
+                {/* Checkbox */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+
+                {/* User Image */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="img w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <Link to="/product/620645">
+                        <img
+                          src="https://mui.com/static/images/avatar/1.jpg"
+                          alt="Product Image"
+                          className="w-full group-hover:scale-105 transition-all"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </TableCell>
+
+                {/* User Name */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Niraj Procoder
+                </TableCell>
+
+                {/* User Email */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead /> nirajprocoder@gmail.com
+                  </span>
+                </TableCell>
+
+                {/* User Phone */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone /> +91 9999999999
+                  </span>
+                </TableCell>
+
+                {/* Created Date */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender /> 01-01-2022
+                  </span>
+                </TableCell>
+              </TableRow>
+              {/* User Details 1 */}
+              <TableRow>
+                {/* Checkbox */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+
+                {/* User Image */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="img w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <Link to="/product/620645">
+                        <img
+                          src="https://mui.com/static/images/avatar/1.jpg"
+                          alt="Product Image"
+                          className="w-full group-hover:scale-105 transition-all"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </TableCell>
+
+                {/* User Name */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Niraj Procoder
+                </TableCell>
+
+                {/* User Email */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead /> nirajprocoder@gmail.com
+                  </span>
+                </TableCell>
+
+                {/* User Phone */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone /> +91 9999999999
+                  </span>
+                </TableCell>
+
+                {/* Created Date */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender /> 01-01-2022
+                  </span>
+                </TableCell>
+              </TableRow>
+              {/* User Details 2 */}
+              <TableRow>
+                {/* Checkbox */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+
+                {/* User Image */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="img w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <Link to="/product/620645">
+                        <img
+                          src="https://mui.com/static/images/avatar/1.jpg"
+                          alt="Product Image"
+                          className="w-full group-hover:scale-105 transition-all"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </TableCell>
+
+                {/* User Name */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Niraj Procoder
+                </TableCell>
+
+                {/* User Email */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead /> nirajprocoder@gmail.com
+                  </span>
+                </TableCell>
+
+                {/* User Phone */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone /> +91 9999999999
+                  </span>
+                </TableCell>
+
+                {/* Created Date */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender /> 01-01-2022
+                  </span>
+                </TableCell>
+              </TableRow>
+              {/* User Details 3 */}
+              <TableRow>
+                {/* Checkbox */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+
+                {/* User Image */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="img w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <Link to="/product/620645">
+                        <img
+                          src="https://mui.com/static/images/avatar/1.jpg"
+                          alt="Product Image"
+                          className="w-full group-hover:scale-105 transition-all"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </TableCell>
+
+                {/* User Name */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Niraj Procoder
+                </TableCell>
+
+                {/* User Email */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead /> nirajprocoder@gmail.com
+                  </span>
+                </TableCell>
+
+                {/* User Phone */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone /> +91 9999999999
+                  </span>
+                </TableCell>
+
+                {/* Created Date */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender /> 01-01-2022
+                  </span>
+                </TableCell>
+              </TableRow>
+              {/* User Details 4 */}
+              <TableRow>
+                {/* Checkbox */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <Checkbox {...label} size="small" />
+                </TableCell>
+
+                {/* User Image */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <div className="flex items-center gap-4 w-[70px]">
+                    <div className="img w-[45px] h-[45px] rounded-md overflow-hidden group">
+                      <Link to="/product/620645">
+                        <img
+                          src="https://mui.com/static/images/avatar/1.jpg"
+                          alt="Product Image"
+                          className="w-full group-hover:scale-105 transition-all"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </TableCell>
+
+                {/* User Name */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  Niraj Procoder
+                </TableCell>
+
+                {/* User Email */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdOutlineMarkEmailRead /> nirajprocoder@gmail.com
+                  </span>
+                </TableCell>
+
+                {/* User Phone */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <MdLocalPhone /> +91 9999999999
+                  </span>
+                </TableCell>
+
+                {/* Created Date */}
+                <TableCell style={{ minWidth: columns.minWidth }}>
+                  <span className="flex items-center gap-2">
+                    <SlCalender /> 01-01-2022
                   </span>
                 </TableCell>
               </TableRow>
