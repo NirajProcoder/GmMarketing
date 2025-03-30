@@ -1,4 +1,4 @@
-import React, { useState, PureComponent } from "react";
+import React, { useState, useContext } from "react";
 import DashboardBoxes from "../../Components/DashboardBoxes/DashboardBoxes";
 import { Button } from "@mui/material";
 import { FaPlus, FaRegEye } from "react-icons/fa";
@@ -31,6 +31,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { MyContext } from "../../App";
 
 const columns = [
   { id: "product", label: "PRODUCT", minWidth: 150 },
@@ -132,6 +133,7 @@ const Dashboard = () => {
       amt: 2100,
     },
   ]);
+  const context = useContext(MyContext);
 
   const handleChangeCatFilter = (event) => {
     setcategoryFilterVal(event.target.value);
@@ -158,7 +160,15 @@ const Dashboard = () => {
             once.
           </p>
           <br />
-          <Button className="btn-blue !capitalize">
+          <Button
+            className="btn-blue !capitalize"
+            onClick={() =>
+              context.setIsOpenFullScreenPanel({
+                open: true,
+                model: "Add Product",
+              })
+            }
+          >
             <FaPlus /> &nbsp; Add Product
           </Button>
         </div>
@@ -201,7 +211,17 @@ const Dashboard = () => {
           </div>
           <div className="col w-[25%] ml-auto flex items-center gap-3">
             <Button className="btn !bg-green-600 !text-white">Export</Button>
-            <Button className="btn-blue !text-white b">Add Product</Button>
+            <Button
+              className="btn-blue !text-white b"
+              onClick={() =>
+                context.setIsOpenFullScreenPanel({
+                  open: true,
+                  model: "Add Product",
+                })
+              }
+            >
+              Add Product
+            </Button>
           </div>
         </div>
 
@@ -595,7 +615,17 @@ const Dashboard = () => {
           </div>
           <div className="col w-[25%] ml-auto flex items-center gap-3">
             <Button className="btn !bg-green-600 !text-white">Export</Button>
-            <Button className="btn-blue !text-white b">Add Product</Button>
+            <Button
+              className="btn-blue !text-white b"
+              onClick={() =>
+                context.setIsOpenFullScreenPanel({
+                  open: true,
+                  model: "Add Product",
+                })
+              }
+            >
+              Add Product
+            </Button>
           </div>
         </div>
 
@@ -1460,7 +1490,12 @@ const Dashboard = () => {
             strokeWidth={3}
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="TotalUsers" stroke="#82ca9d" strokeWidth={3} />
+          <Line
+            type="monotone"
+            dataKey="TotalUsers"
+            stroke="#82ca9d"
+            strokeWidth={3}
+          />
         </LineChart>
       </div>
     </>

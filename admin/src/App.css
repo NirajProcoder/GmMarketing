@@ -45,10 +45,26 @@ a.active button {
   background: #d8e8e8 !important;
 }
 
-.MuiButton-icon svg{
+.MuiButton-icon svg {
   font-size: 27px !important;
 }
 
 .css-rizt0-MuiTypography-root {
   font-size: 14px !important;
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: #fafafa !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+}
+
+.MuiSelect-select {
+  background: #fff !important;
 }
